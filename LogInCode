@@ -1,0 +1,113 @@
+// Tyler Dudley Dec 2024
+// PRAISE THE OMNISSIAH
+
+//preprocessors
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+//variable to check if the password was entered correctly
+int LogInCheckVariable = 0;
+
+//the tester accounts are as follows:
+
+/*
+Meteorologist, 123
+Government, 456
+Responders,789
+*/
+
+//enter function
+void LogInForm()
+{
+    //declare Username and password variables
+    string UserN, Pass;
+
+    //ask user for their username and save it
+    cout << "Please Input Username: " << endl;
+    cin >> UserN;
+    //ask user for their password and save it
+    cout << "Please Input Password: ";
+    cin >> Pass;
+
+    //enter the first check
+    //checks if their username is Meteorologist
+    if (UserN == "Meteorologist")
+    {
+        //if this enter the password correctly
+        if (Pass == "123")
+        {
+            //cout access granted
+            cout << "Access granted" << endl;
+        }
+        //otherwise else:
+        else
+        {
+            //cout access denied
+            cout << "Access denied, please retry application" << endl;
+            //increase the log in checker by 1
+            LogInCheckVariable++;
+        }
+    }
+
+    //enter the first check
+    //checks if their username is Government
+    if (UserN == "Government")
+    {
+        //if this enter the password correctly
+        if (Pass == "456")
+        {
+            //cout access granted
+            cout << "Access granted" << endl;
+        }
+        //otherwise else:
+        else
+        {
+            //cout access denied
+            cout << "Access denied, please retry application" << endl;
+            //increase the log in checker by 1
+            LogInCheckVariable++;
+        }
+    }
+
+    //enter the first check
+    //checks if their username is Responders
+    if (UserN == "Responders")
+    {
+        //if this enter the password correctly
+        if (Pass == "789")
+        {
+            //cout access granted
+            cout << "Access granted" << endl;
+        }
+        //otherwise else:
+        else
+        {
+            //cout access denied
+            cout << "Access denied, please retry application" << endl;
+            //increase the log in checker by 1
+            LogInCheckVariable++;
+        }
+    }
+}
+
+int main()
+{
+    //call func
+    LogInForm();
+
+    //ideally you place the entire program within this if statement
+    //this if statement checks if ever entered the incorrect password
+    //if they did, the log in checker in be equal to 1
+    //and will not allow them to continue on
+    if (LogInCheckVariable == 0)
+    {
+        //PUT CODE HERE PLEASE
+    }
+    else
+    {
+        //alert for if they should reset application
+        cout << "Please reset application";
+    }
+}
+
